@@ -1,5 +1,6 @@
 package me.dio.sacola.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +25,7 @@ public class Item {
     private Produto produto;
     private int quantidade;
 
+    @JsonIgnore
     @ManyToOne
     private Sacola sacola;
 }
